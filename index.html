@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess random Number</title>
+    <link rel="stylesheet" href="./index.css"/>
+   
+</head>
+<body onload="init()">
+    <main>
+        <div class="container">
+            <section class="front-page" id="front-dbox">
+                <div class="front-dilogbox">
+                    <h2>Welcome To Guess a Number Game</h2>
+                    <h3>Guess random number between 1-100</h3>
+                    <img class="logo" src="./10820.jpg" alt="welcome"/>
+                    <h5 class="h5">Select the difficulty</h5>
+                    <div class="div">
+                   <button type = "button" id="eassy-atm" onclick="easyMode()">Eassy 10 Attemps</button>
+                </div>
+                <div class="div">
+                   <button type = "button" id="heard-atm" onclick="heardMode()">Heard 5 Attemps</button>
+                </div>
+                <h5 id="mode"></h5>
+                <div class="slidecontainer">
+                    <input type = "checkbox"  class="checkbox" id="switch" onclick="darkFunction()"/>
+                    <label for="switch"></label>
+                </div>
+                </div>
+               
+            </section>
+        <!--game area code-->
+            <section class="game-body" id="game-start">
+          <div class="game-button">
+            <button type="button" id="new-start" onclick="startAgain()">NEW GAME</button>
+          </div>
+          <h3 id="guess-heading">Your Guess</h3>
+          <div >
+            <h5 id="data-info"></h5>
+          </div>
+          <div id="input-box">
+            <input type="number" min="1" max="100" id="myInput" placeholder="Enter Your Guess" onchange="inputValue()"/>
+            <h3 id="icons"></h3>
+            <div class="num-info">
+                <div class="gue">
+                <p>Number of previous guess</p>
+                <span id="guess">0</span>
+            </div>
+            <div class="atm">
+                <p>Number of previous attemps</p>
+                <span id="attemps">0</span>
+            </div>
+            </div>
+          </div>
+            </section>
+        </div>
+    </main>
+    <script src="./index.js" ></script>
+</body>
+</html>
